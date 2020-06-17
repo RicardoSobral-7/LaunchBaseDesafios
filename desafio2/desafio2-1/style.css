@@ -18,10 +18,11 @@ header .menu a{
     text-decoration: none;
     color: white;
     margin-right: 30px ;
-    transition: color 300ms ;
+   
 }
 
 header .menu a:hover{
+    transition: color 300ms ;
     color: mediumslateblue;
 }
 #wrapper img{
