@@ -1,0 +1,67 @@
+{% extends "layout.njk" %}
+{% block title %}
+    <title>conteúdo</title>
+{% endblock title %}
+{% block style %}
+    <link rel="stylesheet" href="/styles/content.css">
+{% endblock style %}
+
+
+
+{% block main %}
+<main>
+
+    <section>
+        <div class="cards">
+            <div class="card" id="starter">
+                <img src="/assets/img/starter.svg" alt="starter">
+                <h2>Starter</h2>
+                <footer>
+                    <h4>Módulos: 5</h4>
+                    <p>Free</p>
+                </footer>
+
+            </div>
+
+            <div class="card" id="launchbase">
+                <img src="/assets/img/launchBase.svg" alt="launchBase">
+                <h2>Launch Base</h2>
+                <footer>
+                    <h4>Módulos: 24</h4>
+                    <p>Pago</p>
+                </footer>
+            </div>
+
+            <div class="card" id="gostack">
+                <img src="/assets/img/goStack.svg" alt="starter">
+                <h2>goStack</h2>
+                <footer>
+                    <h4>Módulos:</h4>
+                    <p>Pago</p>
+                </footer>
+            </div>
+        </div>
+    </section>
+    
+</main>
+{% endblock main %}
+
+{% block modal %}
+    <!-- MODAL -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <a class="maximize">
+                <img src="/assets/img/maximize-24px.svg" alt="maximize">
+            </a>
+            <a class="modal-close">
+                <i class="material-icons">close</i>
+            </a>
+            <div class="modal-content">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+{% endblock modal %}
+{% block script %}
+    <script src="/scripts/script.js"></script>
+{% endblock script %}
