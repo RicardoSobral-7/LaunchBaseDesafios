@@ -1,0 +1,20 @@
+main .squere{
+    position: fixed;
+    top: 15vh;
+    left: 35vw;
+    background-color: white;
+    border-radius: 15px;
+    width: 640px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+main .squere h1{
+    background-color: white;
+    color: black;
+}
+main .squere h2{
+    color: black;
+
+}
