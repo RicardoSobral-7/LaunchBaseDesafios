@@ -1,5 +1,7 @@
 const express = require("express");
 const nunjuncks = require("nunjucks");
+const courses = require("./data")
+
 
 const server = express();
 
@@ -17,7 +19,22 @@ server.get("/", (req,res)=>{
 });
 
 server.get("/content",(req,res)=>{
-    return res.render("content");
+    return res.render("content",{coursesCard: courses});
+});
+
+server.get("/course/:id", (req,res)=>{
+    const id = req.params.id;
+    const course = courses.find((course)=>{
+        return course.id == id;
+    });
+    if(!course){
+        return res.send("Course not found!")
+    }
+    return res.render("course", {item: course});
+      
+    
+     
+
 });
 
 server.use(function(req, res) {
