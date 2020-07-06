@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% block title %}
+        <title>Home</title>
+    {% endblock title %}
+
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/sobre.css">
+    {% block style %}
+    {% endblock style %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="menu">
+            <a href="/">Sobre</a>
+            <a href="/content">Conteúdos</a>
+            {% block menu %}
+            {% endblock menu %}
+        </div>
+    </header>
+    {% block main %}
+    {% endblock main %}
+
+    {% block modal %}
+    {% endblock modal %}
+
+    {% block script %}
+    {% endblock script %}
+</body>
+</html>
