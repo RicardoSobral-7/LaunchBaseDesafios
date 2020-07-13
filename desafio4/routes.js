@@ -1,6 +1,7 @@
 const express = require("express");
 const courses = require("./data")
 const routes = express.Router();
+const teachers = require("./teachers")
 
 
 
@@ -26,6 +27,16 @@ routes.get("/course/:id", (req,res)=>{
     }
     return res.render("course", {item: course});
 });
+
+routes.get("/teacher", (req,res)=>{
+    return res.render("teacher");
+});
+
+routes.get("/teacherRegister", (req,res)=>{
+    return res.render("teachersCreate");
+});
+
+routes.post("/teacher", teachers.post)
 
 
 

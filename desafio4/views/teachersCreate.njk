@@ -1,0 +1,55 @@
+{% extends "admin.njk" %}
+
+{% block title %}
+<title>Teachers Register</title>
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/teachersRegister.css">
+{% endblock styles %}
+
+{% block content %}
+<form class="card" method="POST" action="./teacher">
+    <section class="avatar" style="background:url(https://source.unsplash.com/collection/10356769/1600x900) no-repeat center center / cover"></section>
+    <section class="details">
+        <h3>Cadastro de Professor</h3>
+        <div class="item">
+            <div>Avatar</div>
+            <input type="text" name="avatar_url" placeholder="http://">
+        </div>
+        
+        <div class="item">
+            <div>Nome</div>
+            <input type="text" name="name">
+        </div>
+        <div class="item">
+            <div>Data de nascimento</div>
+            <input type="date" name="birth">
+        </div>
+        <div class="item">
+            <div>Grau de Escolaridade</div>
+            <select name="graduation">
+                <option value="EnsinoMedioCompleto">Ensino médio completo</option>
+                <option value="EnsinoSuperiorCompleto">Ensino superior completo</option>
+                <option value="Mestrado&Doutorado">Mestrado e Doutorado</option>
+            </select>
+        </div>
+        <div class="item">
+            <div>Tipo de aula</div>
+            <div class="selection">
+                <span><input type="radio" name="typeEducation" value="presencial" checked>Presencial</span>
+                <span><input type="radio" name="typeEducation" value="aDistancia">À Distancia</span>
+            </div>
+            
+            
+        </div>
+        <div class="item">
+            <div>Área de atuação</div>
+            <input type="text" name ="subjects" placeholder="Separe as Matérias por virgula">
+        </div>
+
+        <button type="submit">Salvar</button>
+
+    </section>
+</form>
+{% endblock content %}

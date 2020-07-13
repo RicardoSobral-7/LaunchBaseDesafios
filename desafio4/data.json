@@ -1,0 +1,22 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://www.google.com/search?q=pinguim&tbm=isch&chips=q:pinguim,g_1:wallpaper:5GlL689biqA%3D&rlz=1C1SQJL_enBR896BR896&hl=pt-BR&ved=2ahUKEwiB3J3qq8vqAhXMNLkGHXLVBSUQ4lYoA3oECAEQGw&biw=1903&bih=937#imgrc=YClIOCwZ8Bz1FM",
+      "name": "Júlia Maria da Silva Padilha",
+      "birth": 952387200000,
+      "graduation": "EnsinoSuperiorCompleto",
+      "typeEducation": "presencial",
+      "subjects": "Psicanalista, TCC, Hospitalar"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.todamateria.com.br%2Fupload%2Ffe%2Fni%2Ffenix-cke.jpg&imgrefurl=https%3A%2F%2Fwww.todamateria.com.br%2Ffenix%2F&tbnid=v-zb6avlhZFLcM&vet=12ahUKEwjEzbzlmsvqAhWVL7kGHZWqACgQMygBegUIARDaAQ..i&docid=e8Z4gZOoGNSJOM&w=630&h=524&q=fenix&ved=2ahUKEwjEzbzlmsvqAhWVL7kGHZWqACgQMygBegUIARDaAQ",
+      "name": "Ricardo Sobral Alves da Cunha",
+      "birth": 866073600000,
+      "graduation": "EnsinoSuperiorCompleto",
+      "typeEducation": "aDistancia",
+      "subjects": "Logica, Manutenção, Javascript, Node.js"
+    }
+  ]
+}
