@@ -1,7 +1,6 @@
-{% extends "admin.njk" %}
-
+{% extends "teachers/admin.njk" %}
 {% block title %}
-<title>Teachers</title>
+<title>Apresentação {{teacher.name}}</title>
 {% endblock title %}
 
 {% block styles %}
@@ -10,36 +9,44 @@
 
 {% block content %}
 <div class="card">
-    <section class="avatar" style="background:url(https://source.unsplash.com/collection/10356769/1600x900) no-repeat center center / cover"></section>
+    <section class="avatar" style="background:url({{teacher.avatar_url}}) no-repeat center center / cover"></section>
     <section class="details">
         <h3>Professor</h3>
         
         <div class="item">
             <div>Nome</div>
-            <div>Ricardo Sobral</div>
+            <div>{{teacher.name}}</div>
         </div>
         <div class="item">
             <div>Idade</div>
-            <div>23</div>
+            <div>{{teacher.age}}</div>
         </div>
         <div class="item">
             <div>Grau de Escolaridade</div>
-            <div>Superior</div>
+            <div>{{teacher.graduation}}</div>
         </div>
         <div class="item">
             <div>Tipo de aula</div>
-            <div>Tecnologia</div>
+            <div>
+            {% if teacher.typeEducation == "aDistancia" %}
+                À Distancia
+            {% else %}
+                Presencial
+            {% endif %}
+            </div>
         </div>
         <div class="item">
             <div>Acompanhamento</div>
             <div>
-                <span>Infraetrutura</span>
-                <span>Lógica de programação</span>
+                {% for subjects in teacher.subjects %}
+                <span>{{subjects}}</span>
+                {% endfor %}
+                
             </div>
         </div>
         <div class="item">
             <div>Desde</div>
-            <div>06/07/2020</div>
+            <div>{{teacher.created_at}}</div>
         </div>
 
     </section>

@@ -1,0 +1,19 @@
+{% extends "teachers/admin.njk" %}
+
+{% block title %}
+<title>Teachers Edit {{teacher.name}}</title>
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/teachersRegister.css">
+{% endblock styles %}
+
+{% block content %}
+<form class="card" method="POST" action="/teacher">
+    <section class="avatar" style="background:url({{teacher.avatar_url}}) no-repeat center center / cover"></section>
+    <section class="details">
+        <h3>Editar Professor</h3>
+        {% include "teachers/fields.njk"%}
+    </section>
+</form>
+{% endblock content %}

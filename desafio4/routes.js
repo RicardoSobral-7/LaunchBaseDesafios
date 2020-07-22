@@ -10,7 +10,7 @@ routes.get("/", (req,res)=>{
 });
 
 routes.get("/admin",(req,res)=>{
-    return res.render("admin")
+    return res.redirect("/teacher")
 });
 
 routes.get("/content",(req,res)=>{
@@ -29,14 +29,20 @@ routes.get("/course/:id", (req,res)=>{
 });
 
 routes.get("/teacher", (req,res)=>{
-    return res.render("teacher");
+    return res.render("teachers/teacher");
 });
 
-routes.get("/teacherRegister", (req,res)=>{
-    return res.render("teachersCreate");
+routes.get("/teacher/register", (req,res)=>{
+    return res.render("teachers/teachersRegister");
 });
+
+routes.get("/teacher/:id", teachers.show);
+
+routes.get("/teacher/:id/edit", teachers.edit);
+
 
 routes.post("/teacher", teachers.post)
+
 
 
 
