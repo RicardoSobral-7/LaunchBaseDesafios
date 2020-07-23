@@ -45,3 +45,21 @@
     border-radius: 16px;
     padding: 8px;
 }
+section.details a{
+    display: block;
+    box-sizing: border-box;
+    background-color: darkgoldenrod;
+    text-decoration: none;
+    color: #555;
+    text-align:  center;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+section.details a:hover{
+    transition: border 300ms ease-in, color 300ms ease;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
