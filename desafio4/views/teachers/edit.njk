@@ -1,4 +1,4 @@
-{% extends "teachers/admin.njk" %}
+{% extends "layout.njk" %}
 
 {% block title %}
 <title>Teachers Edit {{teacher.name}}</title>
@@ -9,11 +9,22 @@
 {% endblock styles %}
 
 {% block content %}
-<form class="card" method="POST" action="/teacher">
+<div class="card">
     <section class="avatar" style="background:url({{teacher.avatar_url}}) no-repeat center center / cover"></section>
     <section class="details">
-        <h3>Editar Professor</h3>
-        {% include "teachers/fields.njk"%}
+        <form method="POST" action="/teacher?_method=PUT">
+            <h3>Editar Professor</h3>
+            {% include "teachers/fields.njk"%}
+        
+            <input type="hidden" name="id" value="{{teacher.id}}">
+            
+        </form>
+        <form id="form-delete" action="/teacher?_method=DELETE" method="post">
+                <input type="hidden" name="id" value="{{teacher.id}}">
+                <button type="submit">Excluir</button>
+        </form>
+        
     </section>
-</form>
+</div>
+
 {% endblock content %}

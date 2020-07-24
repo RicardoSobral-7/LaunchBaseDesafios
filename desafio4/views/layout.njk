@@ -3,37 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     {% block title %}
-        <title>Home</title>
+    <title>Home</title>
     {% endblock title %}
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/sobre.css">
-    {% block style %}
-    {% endblock style %}
+    <link rel="stylesheet" href="/styles/admin.css">
+    {% block styles%}
+    {% endblock styles%}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
 </head>
 
 <body>
 
     <header>
         <div class="menu">
-            <a href="/">Sobre</a>
-            <a href="/content">Conteúdos</a>
-            {% block menu %}
-            {% endblock menu %}
+            <a href="/teachers">Teachers</a>
+            <a href="/student">Students</a>
         </div>
     </header>
-    {% block main %}
-    {% endblock main %}
 
-    {% block modal %}
-    {% endblock modal %}
+    {% block content %}
+    {% endblock content %}
 
-    {% block script %}
-    {% endblock script %}
+    {% block scripts %}
+    {% endblock scripts %}
+
 </body>
 </html>

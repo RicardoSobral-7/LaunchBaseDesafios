@@ -1,4 +1,4 @@
-{% extends "teachers/admin.njk" %}
+{% extends "layout.njk" %}
 
 {% block title %}
 <title>Teachers</title>
@@ -10,38 +10,11 @@
 
 {% block content %}
 <div class="card">
-    <section class="avatar" style="background:url(https://source.unsplash.com/collection/10356769/1600x900) no-repeat center center / cover"></section>
-    <section class="details">
-        <h3>Professor</h3>
+    {% for teacher in teacher %}
+    <div>
+        <p>{{teacher.name}}</p>
+    </div>
+    {% endfor %}
         
-        <div class="item">
-            <div>Nome</div>
-            <div>Ricardo Sobral</div>
-        </div>
-        <div class="item">
-            <div>Idade</div>
-            <div>23</div>
-        </div>
-        <div class="item">
-            <div>Grau de Escolaridade</div>
-            <div>Superior</div>
-        </div>
-        <div class="item">
-            <div>Tipo de aula</div>
-            <div>Á Distancia</div>
-        </div>
-        <div class="item">
-            <div>Acompanhamento</div>
-            <div>
-                <span>Infraetrutura</span>
-                <span>Lógica de programação</span>
-            </div>
-        </div>
-        <div class="item">
-            <div>Desde</div>
-            <div>06/07/2020</div>
-        </div>
-
-    </section>
 </div>
 {% endblock content %}
