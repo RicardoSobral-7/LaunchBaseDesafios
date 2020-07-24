@@ -48,7 +48,7 @@ exports.post = (req,res) => {
         if(err){
             return res.send("Write file error!");
         }
-        return res.redirect("teacher");
+        return res.redirect("teachers");
     });
 }
 
@@ -108,7 +108,7 @@ exports.delete = (req,res) =>{
         if(err){
             return res.send("Write file error!");
         }
-        return res.redirect("/teacher");
+        return res.redirect("/teachers");
         
     })
 }
