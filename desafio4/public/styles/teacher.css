@@ -151,6 +151,7 @@ section.details a:hover{
     box-sizing: border-box;
     font-size: 14px;
     line-height: 12px;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
 }
 .table-container #register:hover{
     transition: all 400ms ease;
