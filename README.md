@@ -24,5 +24,5 @@ Para executar o projeto será necessário digitar a seguinte linha no terminal
 
 
 ## Gif de um dos desafios
-![desafio4]()
+![desafio4](https://github.com/RicardoSobral-7/LaunchBaseDesafios/blob/master/desafio4.gif)
 
