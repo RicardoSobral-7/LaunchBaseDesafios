@@ -19,7 +19,7 @@ Para executar o projeto será necessário digitar a seguinte linha no terminal
 * JavaScript
 * Node.JS
 
-## Author
+## Autor
 * Ricardo Sobral - [Github](https://github.com/RicardoSobral-7) and [LinkedIn](https://www.linkedin.com/in/ricardo-sobral-b8978613a/)
 
 
