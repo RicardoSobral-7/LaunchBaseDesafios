@@ -1,5 +1,8 @@
 :root{
-    --main-color:#7159c1;
+    --main-color:#bfdef2;
+    --link-color:#7159c1;
+    --icewhite-color:#e5e5e5;
+    --title-color:#100754;
 }
 
 *{
@@ -14,9 +17,10 @@ body{
 header{
     padding: 32px;
     width: 100%;
-    background-color: #f5f5f5;
+    background-color: var(--icewhite-color);
     box-sizing: border-box;
     text-align: center;
+    height: 300px;
 }
 .menu{
     font-size: 22px;
@@ -24,8 +28,8 @@ header{
 }
 
 .menu a{
+    color: var(--title-color);
     text-decoration: none;
-    color: var(--main-color);
     position: relative;
 }
 
@@ -38,7 +42,7 @@ header{
     content:"";
     width: 0%;
     height: 2px;
-    background-color:var(--main-color);
+    background-color:var(--title-color);
     left: 0;
     bottom: -1px;
 }

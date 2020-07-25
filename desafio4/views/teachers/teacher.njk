@@ -9,12 +9,31 @@
 {% endblock styles %}
 
 {% block content %}
-<div class="card">
-    {% for teacher in teacher %}
-    <div>
-        <p>{{teacher.name}}</p>
-    </div>
-    {% endfor %}
+<div class="card table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Avatar</th>
+                <th>Professor</th>
+                <th>Matérias</th>
+                <th>Perfil</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for teacher in teachers %}
+        <tr>
+            <td style="background: url({{teacher.avatar_url}}) no-repeat center center / cover">
+            </td>
+            <td>{{teacher.name}}</td>
+            <td>{{teacher.subjects}}</td>
+            <td><a href="/teacher/{{teacher.id}}">Visitar</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a id="register" href="/teacher/register">Cadastrar Novo Professor</a>
+    
+    
         
 </div>
 {% endblock content %}

@@ -3,7 +3,11 @@
     to{opacity:1; }
 }
 
+/* body{
+    position: relative;
+} */
 div.card{
+    position:absolute;
     margin: 32px auto;
     width: 800px;
     min-height: 400px;
@@ -12,6 +16,8 @@ div.card{
     animation: slideLeft 400ms ease;
     display:grid;
     grid-template-columns: 40% 60%;
+    top:15vh;
+    left:30vw;
 }
 
 .details{
@@ -29,8 +35,8 @@ div.card{
     padding: 16px 0;
 }
 
-.item div:first-child{
-    border-top: 1px solid rgba(0,0,0,0.3);
+.item div{
+    margin-bottom: 8px;
 }
 
 .item div:nth-child(1){
@@ -91,15 +97,14 @@ form button[type="submit"]{
     color: #555;
     background-color: darkgoldenrod;
     box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0);
     font-weight: bold;
     border-radius: 8px;
     outline: none;
 }
 button[type="submit"]:hover{
-    transition:border 400ms ease, color 400ms ease;
-    border: 2px solid var(--main-color);
-    color: var(--main-color);
+    transition:filter 400ms ease, color 400ms ease;
+    color: black;
+    filter: drop-shadow(0 0 15px darkgoldenrod) brightness(100%);
     
 }
 #form-delete button[type="submit"]{
