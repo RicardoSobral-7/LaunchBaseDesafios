@@ -3,7 +3,16 @@ const data = require("./data.json");
 const {age, graduation, date} = require("./utils");
 
 exports.index = (req,res)=>{
-    return res.render("teachers/teacher", {teachers: data.teachers});
+    let teachers = data.teachers.map( teacher =>{
+        const newTeacher = {
+            ...teacher,
+            subjects: teacher.subjects.split(",")
+        }
+        return newTeacher;
+    });
+
+
+    return res.render("teachers/teacher", {teachers});
 }
 
 exports.show = (req,res) => {
