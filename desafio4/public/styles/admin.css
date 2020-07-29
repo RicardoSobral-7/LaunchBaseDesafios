@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root{
     --main-color:#bfdef2;
     --link-color:#7159c1;
@@ -9,6 +11,8 @@
     margin: 0;
     padding: 0;
     border: none;
+    font-family: 'Open Sans', sans-serif;
+
 }
 body{
     background-color:var(--main-color) ;
@@ -49,4 +53,9 @@ header{
 .menu a:hover::after{
     transition: width 300ms ease-in;
     width: 100%;
+}
+
+.active{
+    font-weight:bold;
+
 }

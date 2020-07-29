@@ -40,6 +40,45 @@ module.exports = {
         const month = `0${date.getUTCMonth() + 1}`.slice(-2);
         const day = `0${date.getUTCDate()}`.slice(-2);
 
-        return `${year}-${month}-${day}`; 
-    } 
+        return  {
+                day, 
+                month, 
+                year,
+                iso:`${year}-${month}-${day}`,
+                bithDay: `${day}/${month}`
+            } 
+    },
+    grade: function(scholarYear){
+        let currentScholarYear = "";
+        switch (scholarYear){
+            case "1":
+                currentScholarYear = "1º Ensino médio";
+            break;
+            case "2":
+                currentScholarYear = "2º Ensino médio";
+            break;
+            case "3":
+                currentScholarYear = "3º Ensino médio";
+            break;
+            case "5":
+                currentScholarYear = "5º Ensino Fundamental";
+            break;
+            case "6":
+                currentScholarYear = "6º Ensino Fundamental";
+            break;
+            case "7":
+                currentScholarYear = "7º Ensino Fundamental";
+            break;
+            case "8":
+                currentScholarYear = "8º Ensino Fundamental";
+            break;
+            case "9":
+                currentScholarYear = "9º Ensino Fundamental";
+            break;
+            default:
+                currentScholarYear = "Current Scholar Year not found!"
+        }
+        return currentScholarYear;
+    }
+
 }

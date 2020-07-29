@@ -7,7 +7,7 @@
       "birth": 866073600000,
       "graduation": "Ensino_Superior_Completo",
       "typeEducation": "aDistancia",
-      "subjects": "Logica, Manutenção, Javascript, Node.js",
+      "subjects": "Logica, Manutenção, Javascript, Node.js, Java, C#",
       "create_at": 1595625768546
     },
     {
@@ -39,6 +39,17 @@
       "typeEducation": "presencial",
       "subjects": "Neuropsicologia, Espanhol",
       "create_at": 1595626711829
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "avatar_url": "https://scontent.fbjp1-1.fna.fbcdn.net/v/t1.0-9/11692696_991907520840463_7149224379281081677_n.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_eui2=AeEXc1jwRtrIrY8uK3yQgBxWaKGx05yOh6toobHTnI6Hqxrga9N00-apYb6ePDpYxjGIvCGm-kVGDI0nymIle70R&_nc_ohc=PaZEc5oOgMoAX8SFOwp&_nc_ht=scontent.fbjp1-1.fna&oh=32a064dc917b27bc770c59186938702a&oe=5F3E7AA3",
+      "name": "Ricardo Sobral Alves da Cunha",
+      "email": "riki.sobral@gmail.com",
+      "birth": 866073600000,
+      "scholarYear": "3º Ensino médio",
+      "workload": 5
     }
   ]
 }

@@ -27,15 +27,18 @@
             <td>{{teacher.name}}</td>
             <td>
                 {% for subject in teacher.subjects %}
+                {% if loop.index0 < 4 %}
                     <span>{{subject}}</span>
+                {% endif %}
+                
                 {% endfor %}
             </td>
-            <td><a href="/teacher/{{teacher.id}}">Visitar</a></td>
+            <td><a href="/teachers/{{teacher.id}}">Visitar</a></td>
         </tr>
         {% endfor %}
         </tbody>
     </table>
-    <a id="register" href="/teacher/register">Cadastrar Novo Professor</a>
+    <a id="register" href="/teachers/register">Cadastrar Novo Professor</a>
     
     
         

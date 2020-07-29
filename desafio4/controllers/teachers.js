@@ -1,6 +1,6 @@
 const fs = require("fs");
-const data = require("./data.json");
-const {age, graduation, date} = require("./utils");
+const data = require("../data.json");
+const {age, graduation, date} = require("../utils");
 
 exports.index = (req,res)=>{
     let teachers = data.teachers.map( teacher =>{
@@ -12,8 +12,12 @@ exports.index = (req,res)=>{
     });
 
 
-    return res.render("teachers/teacher", {teachers});
+    return res.render("teachers/index", {teachers});
 }
+
+exports.create = (req,res)=>{
+    return res.render("teachers/teachersRegister");
+};
 
 exports.show = (req,res) => {
     const {id} = req.params;
@@ -44,8 +48,12 @@ exports.post = (req,res) => {
 
     birth = Date.parse(birth);
     const create_at = Date.now();
-    const id = Number(data.teachers.length + 1);
-    
+    let id = 1;
+    const lastTeacher = data.teachers[data.teachers.length - 1];
+    if(!lastTeacher){
+        id = lastTeacher + 1;
+    }
+        
     data.teachers.push({
         id,
         avatar_url,
@@ -74,7 +82,7 @@ exports.edit = (req,res) => {
 
     const teacher = {
         ...foundTeacher,
-        birth: date(foundTeacher.birth)
+        birth: date(foundTeacher.birth).iso
     }
 
 
@@ -106,7 +114,7 @@ exports.put = (req,res) => {
         if(err){
             return res.send("Write error detected, contact the suport");
         }
-        return res.redirect(`/teacher/${id}`);
+        return res.redirect(`/teachers/${id}`);
     });
 }
 

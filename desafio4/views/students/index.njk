@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+<title>students</title>
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/student.css">
+{% endblock styles %}
+
+{% block content %}
+<div class="card table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Avatar</th>
+                <th>Estudante</th>
+                <th>Email</th>
+                <th>Ano escolar</th>
+                <th>Perfil</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for student in students %}
+        <tr>
+            <td style="background: url({{student.avatar_url}}) no-repeat center center / cover">
+            </td>
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.scholarYear}}</td>
+            <td><a href="/students/{{student.id}}">Visitar</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a id="register" href="/students/register">Cadastrar Novo Estudante</a>
+    
+    
+        
+</div>
+{% endblock content %}

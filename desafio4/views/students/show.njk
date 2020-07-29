@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+{% block title %}
+<title>Apresentação {{student.name}}</title>
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/student.css">
+{% endblock styles %}
+
+{% block content %}
+<div class="card">
+    <section class="avatar" style="background:url({{student.avatar_url}}) no-repeat center center / cover"></section>
+    <section class="details">
+        <h3>Estudante</h3>
+        
+        <div class="item">
+            <div>Nome</div>
+            <div>{{student.name}}</div>
+        </div>
+        <div class="item">
+            <div>Email</div>
+            <div>{{student.email}}</div>
+        </div>
+        <div class="item">
+            <div>Aniversário</div>
+            <div>{{student.birth}}</div>
+        </div>
+        <div class="item">
+            <div>Ano Escolar</div>
+            <div>{{student.scholarYear}}</div>
+        </div>
+        <div class="item">
+            <div>Carga Horária</div>
+            <div>{% if student.workload == "1" %}
+                    {{student.workload}} Hora aula
+                    {% else %}
+                    {{student.workload}} Horas aula
+                {% endif %}
+                </div>
+        </div>
+        <a href="/students/{{student.id}}/edit" class="button">Editar</a>
+
+    </section>
+</div>
+{% endblock content %}
