@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --main-color:#bfdef2;
+    --link-color:#7159c1;
+    --icewhite-color:#e5e5e5;
+    --title-color:#100754;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+
+}
+body{
+    background-color:var(--icewhite-color) ;
+}
+
+header{
+    padding: 32px;
+    width: 100%;
+    background-color: var(--main-color);
+    box-sizing: border-box;
+    text-align: center;
+    height: 300px;
+}
+.menu{
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.menu a{
+    color: var(--title-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.menu a + a{
+    margin-left: 32px;
+}
+
+.menu a::after{
+    position:absolute;
+    content:"";
+    width: 0%;
+    height: 2px;
+    background-color:var(--title-color);
+    left: 0;
+    bottom: -1px;
+}
+.menu a:hover::after{
+    transition: width 300ms ease-in;
+    width: 100%;
+}
+
+.active{
+    font-weight:bold;
+
+}

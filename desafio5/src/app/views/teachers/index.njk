@@ -1,0 +1,46 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+<title>Teachers</title>
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/teacher.css">
+{% endblock styles %}
+
+{% block content %}
+<div class="card table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Avatar</th>
+                <th>Professor</th>
+                <th>Matérias</th>
+                <th>Perfil</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for teacher in teachers %}
+        <tr>
+            <td style="background: url({{teacher.avatar_url}}) no-repeat center center / cover">
+            </td>
+            <td>{{teacher.name}}</td>
+            <td>
+                {% for subject in teacher.subjects_taught %}
+                {% if loop.index0 < 4 %}
+                    <span>{{subject}}</span>
+                {% endif %}
+                
+                {% endfor %}
+            </td>
+            <td><a href="/teachers/{{teacher.id}}">Visitar</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a id="register" href="/teachers/register">Cadastrar Novo Professor</a>
+    
+    
+        
+</div>
+{% endblock content %}
