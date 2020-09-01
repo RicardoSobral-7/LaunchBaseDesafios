@@ -70,6 +70,33 @@ section.details a:hover{
     color: var(--link-color);
 }
 
+/* header filter */
+
+.header form{
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    gap: 3px;
+}
+
+.header form input{
+    padding: 8px;
+    border: 1px solid #777;
+    font-weight: bold;
+    color: #555;
+}
+
+.header form button{
+    font-weight: bold;
+    border-radius: 50%;
+    background: url(../assets/search.svg) center center no-repeat;
+}
+
+
+
+
+
 /* Teachers List */
 .table-container{
     display: block;
@@ -84,7 +111,7 @@ section.details a:hover{
 
 .table-container table thead tr{
     display:grid;
-    grid-template-columns: 100px 1fr 1fr 68px;
+    grid-template-columns: 100px 1fr 1fr 1fr 68px;
     width: 100%;
     
 }
@@ -97,7 +124,7 @@ section.details a:hover{
 
 .table-container table tbody tr{
     display: grid;
-    grid-template-columns: 100px 1fr 1fr 68px;
+    grid-template-columns: 100px 1fr 1fr 1fr 68px;
     grid-template-rows: 50px;
     align-items: center;
     grid-row-gap: 10px;

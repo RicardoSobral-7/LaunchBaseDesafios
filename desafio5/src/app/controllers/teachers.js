@@ -6,12 +6,23 @@ const Teacher = require("../models/teacher");
 
 module.exports = {
     index(req,res) {
-        Teacher.all(function(teachers){
-            teachers.map( teacher =>{
+        const {filter} = req.query;
+
+        if (filter){
+            Teacher.findBy(filter, function(teachers){
+                teachers.map( teacher =>{
                     teacher.subjects_taught =  teacher.subjects_taught.split(",")
                 });
-            return res.render("teachers/index", {teachers});
-        });
+            return res.render("teachers/index", {teachers, filter});
+            });
+        }else{
+            Teacher.all(function(teachers){
+                teachers.map( teacher =>{
+                    teacher.subjects_taught =  teacher.subjects_taught.split(",")
+                });
+                return res.render("teachers/index", {teachers});
+            });
+        }
     },
 
     create(req,res) {

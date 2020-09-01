@@ -10,7 +10,9 @@ module.exports = {
     },
 
     create(req,res) {
-        return res.render("students/studentsRegister");
+        Student.teacherSelectOptions(function(options){ 
+            return res.render("students/studentsRegister",{teachersOptions: options});
+        });
     },
 
     post(req,res) {
@@ -38,8 +40,10 @@ module.exports = {
             if(!student) return res.send("Student not found!");
 
             student.birth = date(student.birth).iso;
-            
-            return res.render("students/edit",{student});
+
+            Student.teacherSelectOptions(function(options){
+                return res.render("students/edit",{student, teachersOptions: options});
+            });
         });
     },
 

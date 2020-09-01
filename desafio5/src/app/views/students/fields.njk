@@ -58,6 +58,17 @@
     <div>Carga horária</div>
     <input type="number" name="workload"  placeholder="Considerar a hora aula 50 minutos" value={{student.workload}}>
 </div>
+<div class="item">
+    <div>Professores</div>
+    <div>
+        <select name="teacher">
+            {% for teacher in teachersOptions %}
+            <option value="{{teacher.id}}" {% if students.teacher_id == teacher.id %} selected
+            {% endif %}>{{teacher.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
 
 <button type="submit">Salvar</button>
 
