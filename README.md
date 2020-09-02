@@ -9,6 +9,7 @@ Para executar os projetos em sua máquina será necessários instalar esses prog
 
 ## Como executar
 Para executar o projeto será necessário digitar a seguinte linha no terminal
+* *npm install*
 * *npm start*
 * alguns projetos irão abrir automáticamente, outros será necessário digitar em seu navegador o endereço a baixo
 * **http://localhost:5500/**
