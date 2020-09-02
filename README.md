@@ -24,6 +24,6 @@ Para executar o projeto será necessário digitar a seguinte linha no terminal
 
 
 ## Gif de um dos desafios
-![desafio4Teacher](https://github.com/RicardoSobral-7/LaunchBaseDesafios/blob/master/desafio4/teacher.gif)
-![desafio4Student](https://github.com/RicardoSobral-7/LaunchBaseDesafios/blob/master/desafio4/student.gif)
+![desafio5Teacher](https://github.com/RicardoSobral-7/LaunchBaseDesafios/blob/master/desafio5/teachers.gif)
+![desafio5Student](https://github.com/RicardoSobral-7/LaunchBaseDesafios/blob/master/desafio5/students.gif)
 
