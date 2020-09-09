@@ -70,6 +70,26 @@ section.details a:hover{
     color: var(--link-color);
 }
 
+.header form{
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    gap: 3px;
+}
+
+.header form input{
+    padding:8px;
+    border: 1px solid #777;
+    font-weight: bold;
+    color: #555;
+}
+
+.header form button{
+    border-radius:50%;
+    background: url(../assets/search.svg) center center no-repeat;
+}
+
 /* Teachers List */
 .table-container{
     display: block;
@@ -168,4 +188,35 @@ section.details a:hover{
 .table-container #register:hover{
     transition: all 400ms ease;
     color: white;
+}
+
+/* pagination */
+
+.table-container{
+    display: grid;
+    grid-template: 64px 1fr 64px / 1fr;
+}
+
+.table-container .header{
+    margin: 0;
+    align-self: start;
+}
+
+.table-container .pagination{
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+}
+
+.pagination a,
+.pagination span{
+    color: var(--link-color);
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.pagination a:hover{
+    transition: filter 300ms ease;
+    filter: brightness(1.5);
+    border-bottom: 1px solid var(--link-color);
 }

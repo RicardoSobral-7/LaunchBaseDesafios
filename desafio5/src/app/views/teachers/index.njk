@@ -48,6 +48,11 @@
         {% endfor %}
         </tbody>
     </table>
+    <div class="pagination"
+    data-page={{pagination.page}}
+    data-total={{pagination.total}}
+    data-filter={{filter}}
+    ></div>
     <a id="register" href="/teachers/register">Cadastrar Novo Professor</a>
     
     

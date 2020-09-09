@@ -10,6 +10,14 @@
 
 {% block content %}
 <div class="card table-container">
+
+    <div class="header">
+        <form action="/students" method="GET">
+            <input type="text" name="filter" placeholder="Nome  ou Email" value={{filter}}>
+            <button type="submit"></button>
+        </form>
+    </div>
+
     <table>
         <thead>
             <tr>
@@ -33,6 +41,12 @@
         {% endfor %}
         </tbody>
     </table>
+    <div class="pagination"
+    data-page={{pagination.page}}
+    data-total={{pagination.total}}
+    data-filter={{filter}}
+    ></div>
+
     <a id="register" href="/students/register">Cadastrar Novo Estudante</a>
     
     
