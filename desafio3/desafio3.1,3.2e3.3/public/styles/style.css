@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 body{
     background-color:#131217 ;
@@ -32,8 +33,21 @@ header .menu a:hover{
     transition: color 300ms;
     color: mediumslateblue;
 }
+
 #wrapper img{
     width: 200px;
     height: 220px;
     border-radius: 8px;
+}
+
+.footer{
+    padding: 12px;
+    background-color: var(--main-color);
+    width:100%;
+    margin: 0 auto;
+
+}
+
+.footer div{
+    text-align: center;
 }
